@@ -10,11 +10,11 @@ import { auth } from "../utils/firebase";
 
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { USER_AVATAR } from "../utils/constants";
+import { USER_AVATAR } from "../utils/constants"; 
 import { imageUrl } from "../utils/constants";
 
 const Login = () => {
-  console.log("imageUrl:", imageUrl);
+  // console.log("imageUrl:", imageUrl);
   const [isSignInForm, setIsSignINForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
 
@@ -28,8 +28,8 @@ const Login = () => {
     // validate the form data
     const message = checkValidData(email.current.value, password.current.value);
     // console.log(name.current.value);
-    console.log(email.current.value);
-    console.log(password.current.value);
+    // console.log(email.current.value);
+    // console.log(password.current.value);
 
     setErrorMessage(message);
     if (message) return;
@@ -67,7 +67,7 @@ const Login = () => {
               // ...
               setErrorMessage(error.message);
             });
-          console.log(user);
+          // console.log(user);
 
           // ...
         })
