@@ -16,7 +16,6 @@ const Header = () => {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
-        
       })
       .catch((error) => {
         // An error happened.
@@ -33,7 +32,7 @@ const Header = () => {
             uid: uid,
             email: email,
             displayName: displayName,
-            photoURL:photoURL,
+            photoURL: photoURL,
           })
         );
 
@@ -46,18 +45,14 @@ const Header = () => {
         navigate("/");
       }
     });
-    return () => unsubscribe ();  // Unsubscribe when components unmount
+    return () => unsubscribe(); // Unsubscribe when components unmount
   }, []);
   return (
     <div className="w-full m-auto flex justify-between px-8 py-3 absolute left-0 right-0 bg-black bg-opacity-40 z-10">
-      <img
-        className="w-40"
-        src={LOGO}
-        alt="Logo"
-      />
+      <img className="w-40" src={LOGO} alt="Logo" />
       {user && (
         <div className="flex gap-5 z-40">
-          <img className="w-14" src={user?.photoURL} alt="userIcon" /> 
+          <img className="w-14" src={user?.photoURL} alt="userIcon" />
           <button onClick={handleSignOut} className="font-bold text-white">
             (Sign Out)
           </button>

@@ -1,14 +1,18 @@
-import React from 'react'
-import { IMG_CDN_URL } from '../utils/constants'
+import React from "react";
+import { IMG_CDN_URL } from "../utils/constants";
 
-const MovieCards = ({posterPath}) => {
+const MovieCards = ({ posterPath }) => {
   return (
-    <div className='flex'>
-    <div className='w-40'>
-      <img className='rounded-md' alt='movie card' src={IMG_CDN_URL+posterPath} />
+    <div className="flex">
+      <div className="w-40">
+        <img
+          className="rounded-md"
+          alt="movie card"
+          src={IMG_CDN_URL + posterPath}
+        />
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
 export default MovieCards;

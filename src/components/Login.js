@@ -17,7 +17,7 @@ const Login = () => {
   console.log("imageUrl:", imageUrl);
   const [isSignInForm, setIsSignINForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  
+
   const dispatch = useDispatch();
 
   const name = useRef(null);
@@ -48,7 +48,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: USER_AVATAR ,
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               // Profile updated!
@@ -61,7 +61,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-             
             })
             .catch((error) => {
               // An error occurred
@@ -69,7 +68,7 @@ const Login = () => {
               setErrorMessage(error.message);
             });
           console.log(user);
-          
+
           // ...
         })
         .catch((error) => {
@@ -88,7 +87,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -104,7 +102,7 @@ const Login = () => {
   };
   return (
     <div className="bg-[url(https://assets.nflxext.com/ffe/siteui/vlv3/af2fac72-d956-4952-8686-4d45d359d78c/web/IN-en-20250526-TRIFECTA-perspective_5db3e163-56f7-47c7-9a65-b79b9d76bf24_large.jpg)] bg-blend-multiply min-h-screen bg-center bg-cover bg-black bg-opacity-50">
-      <div className="w-4/5 m-auto"> 
+      <div className="w-4/5 m-auto">
         <Header />
         <div className="p-8 bg-black bg-opacity-65 m-auto w-5/12">
           <form
